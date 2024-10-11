@@ -1,36 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shubham Rajak - DevOps Portfolio">
     <title>Shubham Rajak | DevOps Engineer</title>
+    <meta name="description" content="Portfolio of Shubham Rajak - DevOps Engineer specializing in cloud deployments, automation, and containerization.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS File -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle" aria-label="Toggle theme"></button>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
     <header>
         <h1>Shubham Rajak</h1>
         <p>DevOps Engineer | Cloud | Automation | Docker | AWS</p>
     </header>
 
+    <!-- About Me Section -->
     <section id="about">
         <h2>About Me</h2>
         <p>Hi, I'm Shubham Rajak, transitioning from a Business Analyst to a DevOps Engineer. I am passionate about cloud deployments, automation, and containerization. Check out my latest work below!</p>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <h2>My Projects</h2>
-        <ul>
-            <li><a href="https://github.com/urplatshubham/docker-nginx" target="_blank">Dockerized Nginx Web App</a> - A simple HTML page running on Nginx and Docker.</li>
-            <li><a href="https://github.com/urplatshubham/travelmemory" target="_blank">TravelMemory MERN App</a> - Deployed on AWS EC2, showcasing full-stack cloud deployment.</li>
-            <li><a href="https://github.com/urplatshubham/web-app-lifecycle-management" target="_blank">Web Application Lifecycle Management</a> - This project provides an automated approach to launching, managing, and tearing down a complete web application infrastructure on AWS, using Python's boto3 library.</li>
-            <li><a href="https://github.com/urplatshubham/Assignment-On-Serverless-Architecture" target="_blank">Serverless Architecture</a> - Demonstrating how to automate routine AWS tasks using Lambda and Boto3, including EC2 management, S3 file cleanup, and auditing bucket encryption.</li>
-        </ul>
+        <div class="project-card">
+            <h3><a href="https://github.com/urplatshubham/docker-nginx" target="_blank">Dockerized Nginx Web App</a></h3>
+            <p>A simple HTML page running on Nginx and Docker.</p>
+        </div>
+        <div class="project-card">
+            <h3><a href="https://github.com/urplatshubham/travelmemory" target="_blank">TravelMemory MERN App</a></h3>
+            <p>Deployed on AWS EC2, showcasing full-stack cloud deployment.</p>
+        </div>
+        <div class="project-card">
+            <h3><a href="https://github.com/urplatshubham/web-app-lifecycle-management" target="_blank">Web Application Lifecycle Management</a></h3>
+            <p>This project provides an automated approach to launching, managing, and tearing down a complete web application infrastructure on AWS, using Python's boto3 library.</p>
+        </div>
+        <div class="project-card">
+            <h3><a href="https://github.com/urplatshubham/Assignment-On-Serverless-Architecture" target="_blank">Serverless Architecture</a></h3>
+            <p>Demonstrating how to automate routine AWS tasks using Lambda and Boto3, including EC2 management, S3 file cleanup, and auditing bucket encryption.</p>
+        </div>
     </section>
 
-    <footer>
-        <p>Connect with me on <a href="https://github.com/urplatshubham" target="_blank">GitHub</a> or <a href="https://www.linkedin.com/in/shubham-rajak-4bb957166/" target="_blank">LinkedIn</a>.</p>
-    </footer>
+    <!-- Contact Section -->
+     <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me via email or phone:</p>
+        <p>Email: <a href="mailto:imperialshubham.3@gmail.com">imperialshubham.3@gmail.com</a></p>
+        <p>Phone: <a href="tel:+91-7908497035">+91-7908497035</a></p>
+        <form action="https://formspree.io/f/{your_form_id}" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+   <footer>
+    <p>Connect with me on 
+        <a href="https://github.com/urplatshubham" target="_blank"><i class="fab fa-github"></i> GitHub</a> or 
+        <a href="https://www.linkedin.com/in/shubham-rajak-4bb957166/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>.
+    </p>
+</footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
 </body>
 </html>
-

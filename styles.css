@@ -1,55 +1,328 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(120deg, #7b4397, #dc2430, #8021fd);
+    background-size: 200% 200%;
+    animation: gradient-animation 10s ease infinite;
+    height: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+    color: #202425; /* Default text color for light mode */
 }
 
+html, body {
+    min-height: 100%;
+}
+
+#root, .wrapper {
+    min-height: 100%;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1c1c1c; /* Dark background for dark mode */
+    color: #800b0b; /* Light text color for dark mode */
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode footer {
+    background-color: #2a2a2a; /* Darker background for dark mode sections */
+}
+
+body.dark-mode a {
+    color: #50e3c2; /* Light cyan links for visibility */
+}
+
+body.dark-mode a:hover {
+    color: #7b4397; /* Purple hover effect in dark mode */
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode p {
+    color: #e0e0e0; /* Light color for headings and paragraphs in dark mode */
+}
+
+body.dark-mode .project-card {
+    background-color: #333333; /* Darker background for project cards in dark mode */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .project-card h3 {
+    color: #e0e0e0; /* Light color for project card titles */
+}
+
+body.dark-mode .project-card p {
+    color: #cccccc; /* Light gray for project descriptions */
+}
+
+body.dark-mode #contact a {
+    color: #50e3c2; /* Light cyan contact links */
+}
+
+body.dark-mode #contact form input,
+body.dark-mode #contact form textarea {
+    background-color: #2e2e2e; /* Dark background for form fields */
+    color: #e0e0e0; /* Light text for form fields */
+    border: 1px solid #555; /* Lighter border for form fields */
+}
+/* Header */
 header {
-    background-color: #0073e6;
+    background-color: #7b4397; /* Deep purple for header */
     color: white;
-    padding: 20px;
+    padding: 60px 20px;
     text-align: center;
+    background-size: cover;
+    background-position: center;
 }
 
 h1 {
     margin: 0;
+    font-family: 'Playfair Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Modern, elegant font for headings */
+    font-size: 3em;
+    letter-spacing: 1px;
 }
 
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #dfe6e9; /* Slightly lighter text color for readability */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #dc2430; /* Vibrant pink for navigation bar */
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Clean, modern font for navigation */
+    font-weight: 500;
+    text-decoration:double;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #7b4397; /* Purple hover effect for consistency */
+    border-radius: 5px;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 26px;
+    background-color: #060606; /* Bright blue for toggle */
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode #theme-toggle {
+    background-color: #7b4397; /* Purple background in dark mode */
+}
+
+body.dark-mode #theme-toggle:before {
+    transform: translateX(24px); /* Slide circle to the right for dark mode */
+}
+
+/* Hover Effect */
+#theme-toggle:hover {
+    background-color: #dc2430; /* Pink on hover for toggle */
+}
+
+body.dark-mode #theme-toggle:hover {
+    background-color: #21d4fd; /* Blue on hover in dark mode */
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: rgb(188, 185, 169);
+    text-decoration: double;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #0073e6;
+    color: #1c2c2f; /* Black for section titles */
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 40px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+p, li, a {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
 }
 
-ul li {
-    margin: 10px 0;
+/* Project Cards */
+.project-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-a {
-    color: #0073e6;
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    color: #7b4397; /* Deep purple for project titles */
+    font-size: 1.8em;
+}
+
+.project-card p {
+    margin-top: 10px;
+    color: #2d3436;
+}
+
+.project-card a {
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-a:hover {
+.project-card a:hover {
+    color: #dc2430; /* Pink hover effect */
+}
+
+/* Contact Form */
+#contact {
+    text-align: center;
+}
+
+#contact a {
+    color: #b7ff00; /* Bright blue for contact links */
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: double;
+}
+
+#contact a:hover {
     text-decoration: underline;
 }
 
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#contact form input,
+#contact form textarea {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+#contact form button {
+    padding: 15px;
+    background-color: #21d4fd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#contact form button:hover {
+    background-color: #7b4397;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #0073e6;
+    background-color: #dc2430;
     color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: #7b4397;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #theme-toggle {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* Background Animation */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hover Effects in Dark Mode */
+body.dark-mode nav ul li a:hover {
+    background-color: #50e3c2; /* Light cyan hover in dark mode */
+    color: #1c1c1c; /* Text changes to dark on hover in dark mode */
 }
