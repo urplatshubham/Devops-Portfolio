@@ -10,6 +10,16 @@ body {
     scroll-behavior: smooth;
     color: #202425; /* Default text color for light mode */
 }
+/* Style for Image */
+#profile-image {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Ensure the image stays square */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits within the circle */
+    margin: 20px auto; /* Adds space and centers the image */
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
 
 html, body {
     min-height: 100%;
